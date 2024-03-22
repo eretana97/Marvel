@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "863348232639",
+    "project_id": "marvel-app-android",
+    "storage_bucket": "marvel-app-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863348232639:android:acfd0ac342a1ea7a1a510a",
+        "android_client_info": {
+          "package_name": "com.eretana.marvel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR2fglDns068KpOZtoFiEGydLgdxtTDqw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

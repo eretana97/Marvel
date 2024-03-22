@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragment_inifinity_slider"
+    android:id="@+id/nav_graph">
+
+    <fragment
+        android:id="@+id/fragment_inifinity_slider"
+        android:name="com.eretana.marvel.view.fragments.InfiniteSlider"
+        android:label="Infinity Slider"
+        tools:layout="@layout/fragment_infinite_slider"
+        >
+
+        <action android:id="@+id/fragment_inifinity_slider_to_fragment_character_info"
+            app:destination="@id/frament_character_info"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            />
+
+        <action
+            android:id="@+id/fragment_inifinity_slider_to_fragment_favorites"
+            app:destination="@id/fragment_favorites"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/frament_character_info"
+        android:name="com.eretana.marvel.view.fragments.CharacterInfo"
+        android:label="Character Info"
+        tools:layout="@layout/fragment_character_info"
+        />
+
+    <fragment
+        android:id="@+id/fragment_favorites"
+        android:name="com.eretana.marvel.view.fragments.Favorites"
+        android:label="Favorite List"
+        tools:layout="@layout/fragment_favorites"
+        />
+
+
+
+</navigation>
