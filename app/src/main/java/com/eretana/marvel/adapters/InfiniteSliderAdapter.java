@@ -23,12 +23,10 @@ public class InfiniteSliderAdapter extends RecyclerView.Adapter<InfiniteSliderAd
 
     List<Character> characters;
     ViewPager2 viewPager2;
-    Context maincontext;
 
-    public InfiniteSliderAdapter(List<Character> characters, ViewPager2 viewPager2, Context maincontext) {
+    public InfiniteSliderAdapter(List<Character> characters, ViewPager2 viewPager2) {
         this.characters = characters;
         this.viewPager2 = viewPager2;
-        this.maincontext = maincontext;
     }
 
     @NonNull
@@ -65,12 +63,8 @@ public class InfiniteSliderAdapter extends RecyclerView.Adapter<InfiniteSliderAd
                 @Override
                 public void onClick(View v) {
                     int id = characters.get(getAdapterPosition()).id;
-                    //Intent intent = new Intent(maincontext, Info.class);
-                    //intent.putExtra("id",id);
-                    //maincontext.startActivity(intent);
                     Bundle bundle = new Bundle();
                     bundle.putInt("id",id);
-
                     Main.navController.navigate(R.id.fragment_inifinity_slider_to_fragment_character_info,bundle);
                 }
             });

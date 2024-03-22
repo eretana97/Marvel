@@ -55,28 +55,17 @@ public class CharacterInfo extends Fragment implements Observer<Character>, View
     private void load(){
         fabFavorite.setOnClickListener(this);
 
-        vm.getCharacterInfo().observe(this,this);
+        vm.getCharacterInfo().observe(getViewLifecycleOwner(),this);
         vm.callService(bundle.getInt("id"));
 
-        vm.ifSaved().observe(this, new Observer<Boolean>() {
-            @Override
-            public void onChanged(Boolean aBoolean) {
-                Toast.makeText(fragmentView.getContext(),"CHARACTER ALREADY SAVED",Toast.LENGTH_LONG).show();
-            }
-        });
 
-        vm.findCharacter(bundle.getInt("id"));
     }
 
     @Override
     public void onClick(View v) {
         if(character != null) {
-            if(!repository.ifCharacterExist(character.id)){
-                repository.insertFavorite(character);
-                Toast.makeText(fragmentView.getContext(),"SAVED ON FAVORITES",Toast.LENGTH_LONG).show();
-            }else{
-                Toast.makeText(fragmentView.getContext(),"CHARACTER ALREADY SAVED",Toast.LENGTH_LONG).show();
-            }
+            repository.insertFavorite(character);
+            Toast.makeText(fragmentView.getContext(),"SAVED ON FAVORITES",Toast.LENGTH_LONG).show();
         }
     }
 

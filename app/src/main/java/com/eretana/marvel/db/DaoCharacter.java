@@ -1,5 +1,6 @@
 package com.eretana.marvel.db;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -17,7 +18,7 @@ public interface DaoCharacter {
     boolean exist(int characterId);
 
     @Query("SELECT * FROM characters")
-    List<Character> getAll();
+    LiveData<List<Character>> getAll();
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insert(Character character);

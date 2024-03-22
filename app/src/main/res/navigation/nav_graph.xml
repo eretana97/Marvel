@@ -40,7 +40,16 @@
         android:name="com.eretana.marvel.view.fragments.Favorites"
         android:label="Favorite List"
         tools:layout="@layout/fragment_favorites"
-        />
+        >
+
+        <action
+            android:id="@+id/fragment_favorites_to_fragment_characterinfo"
+            app:destination="@id/frament_character_info"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            />
+
+    </fragment>
 
 
 

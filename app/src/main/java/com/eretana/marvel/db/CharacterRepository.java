@@ -3,6 +3,7 @@ package com.eretana.marvel.db;
 import android.content.Context;
 import android.util.Log;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Room;
 
 import com.eretana.marvel.model.Character;
@@ -22,7 +23,7 @@ public class CharacterRepository {
         dao = db.daoCharacter();
     }
 
-    public List<Character> getAllFavorites(){
+    public LiveData<List<Character>> getAllFavorites(){
         return dao.getAll();
     }
 
@@ -30,6 +31,14 @@ public class CharacterRepository {
     public void insertFavorite(Character c){
         try {
             executor.execute(()->dao.insert(c));
+        }catch (Exception e){
+            Log.e("MARVEL_ROOM",e.getMessage());
+        }
+    }
+
+    public void deleteFavorite(Character c){
+        try {
+            executor.execute(()->dao.delete(c));
         }catch (Exception e){
             Log.e("MARVEL_ROOM",e.getMessage());
         }

@@ -1,5 +1,6 @@
 package com.eretana.marvel.view.fragments;
 
+import android.media.Image;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.SearchView;
@@ -10,6 +11,8 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import com.eretana.marvel.R;
 import com.eretana.marvel.adapters.InfiniteSliderAdapter;
@@ -28,6 +31,7 @@ public class InfiniteSlider extends Fragment implements Observer<List<Character>
     private List<Character> characters;
     private InfiniteSliderAdapter adapter;
     private SearchView searchView;
+    private Button btn_favlist;
 
     private static int limit = 5;
     private static int offset = 0;
@@ -48,13 +52,21 @@ public class InfiniteSlider extends Fragment implements Observer<List<Character>
         characters = new ArrayList<>();
         searchView = fragmentView.findViewById(R.id.sv_search);
         viewPager2 = fragmentView.findViewById(R.id.vp_slider);
-        adapter = new InfiniteSliderAdapter(characters,viewPager2, fragmentView.getContext());
+        btn_favlist = fragmentView.findViewById(R.id.btn_favlist);
+        adapter = new InfiniteSliderAdapter(characters,viewPager2);
     }
 
     private void load(){
         viewPager2.setAdapter(adapter);
-        vm.getCharaters().observe(this,this);
+        vm.getCharaters().observe(getViewLifecycleOwner(),this);
         vm.callService(searchname,limit,offset);
+
+        btn_favlist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Main.navController.navigate(R.id.fragment_inifinity_slider_to_fragment_favorites);
+            }
+        });
 
         viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override

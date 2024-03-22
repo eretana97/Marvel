@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Marvel</string>
+    <string name="hello_blank_fragment">Hola fragment vacio</string>
+    <string name="remove_from_favorites">Eliminar de favoritos?</string>
+</resources>
