@@ -1,9 +1,13 @@
 package com.eretana.marvel.viewmodel;
 
+import android.app.AlertDialog;
+
+import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -21,13 +25,21 @@ public class LoginVM extends ViewModel {
     }
 
     public void attempt(String email, String password){
-        fauth.signInWithEmailAndPassword(email,password).addOnCompleteListener(task -> {
-            if(task.isSuccessful()){
-                currentUser.setValue(fauth.getCurrentUser());
-            }else{
-                currentUser.setValue(null);
-            }
-        });
+
+        if(!email.isEmpty() && !password.isEmpty()){
+            fauth.signInWithEmailAndPassword(email,password).addOnCompleteListener(task -> {
+                if(task.isSuccessful()){
+                    currentUser.setValue(fauth.getCurrentUser());
+                }else{
+                    currentUser.setValue(null);
+                }
+            });
+        }else{
+            currentUser.setValue(null);
+        }
+
+
     }
+
 
 }

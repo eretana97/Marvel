@@ -19,11 +19,11 @@
         <item name="colorPrimary">@color/marvel_red</item>
         <item name="colorPrimaryVariant">@color/marvel_red_500</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="android:colorBackground">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/marvel_red_500</item>
         <item name="colorSecondaryVariant">@color/marvel_red_500</item>
         <item name="colorOnSecondary">@color/black</item>
+        <item name="cardBackgroundColor">@color/marvel_red</item>
         <!-- Status bar color. -->
         <!-- Customize your theme here. -->
         <item name="android:statusBarColor">@color/black</item>

@@ -96,7 +96,6 @@ public class CharacterInfo extends Fragment implements Observer<Character>, View
         vm.getComicsList().observe(getViewLifecycleOwner(), new Observer<List<Comic>>() {
             @Override
             public void onChanged(List<Comic> cs) {
-                Log.d("MARVEL_COMICS","COMICS SIZE:" + cs.size());
                 comics.addAll(cs);
                 adapter.notifyDataSetChanged();
             }

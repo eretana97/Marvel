@@ -1,12 +1,12 @@
 
 # Hola, Edgar Retana les saluda! 👋
+
 A continuacion encontraran el detalle de todo el proyecto Marvel
+
 
 ## Marvel Android APP
 
 La app desarrollada les permitira a los usuarios autenticados ver la lista completa de personajes del universo de Marvel, podran realizar busquedas por nombre de los personajes y podras guardar tus personajes favoritos a una lista personal. Ademas podras ver la descripcion de cada personaje y la lista de comics en los que este ha aparecido, podras ver el precio del comic y abrir un enlace web que te llevara a ese comic.
-
-
 
 
 ## Pantallas
@@ -16,6 +16,8 @@ La app desarrollada les permitira a los usuarios autenticados ver la lista compl
 - Main
 - (Fragment) Lista de favoritos 
 - (Fragment) Details
+
+
 ## Caracteristicas Implementadas
 
 - Patron de diseño MVVM
@@ -36,10 +38,12 @@ La app desarrollada les permitira a los usuarios autenticados ver la lista compl
 - Redireccionamiento a navegador Web
 - Libreria Glide para mostrar Imagenes
 - JetPack Navigation para navegacion entre fragmentos del Main Activity
+- App icon
+- Plurals Strings
 
 
 
-## Peticiones HTTP
+## Peticiones HTTPS
 Lista de peticiones realizadas a la API de Marvel
 
 #### Obtener lista de personajes
@@ -48,14 +52,14 @@ Lista de peticiones realizadas a la API de Marvel
   GET /characters
 ```
 
-| Parametro | Tipo    | Descripción                |
-| :-------- | :------- | :------------------------- |
-| `ts` | `long` | Current Timestamp |
-| `apikey` | `String` | Public Api Key |
-| `hash` | `String` | MD5 Hash |
-| `nameStartsWith` | `String` | Nombre de Personaje |
-| `limit` | `int` | Limite de resultados |
-| `offset` | `int` | Desplazamiento de resultados |
+| Parametro        | Tipo     | Descripción                  |
+|:-----------------|:---------|:-----------------------------|
+| `ts`             | `long`   | Current Timestamp            |
+| `apikey`         | `String` | Public Api Key               |
+| `hash`           | `String` | MD5 Hash                     |
+| `nameStartsWith` | `String` | Nombre de Personaje          |
+| `limit`          | `int`    | Limite de resultados         |
+| `offset`         | `int`    | Desplazamiento de resultados |
 
 #### Filtrar personaje por id
 
@@ -63,25 +67,25 @@ Lista de peticiones realizadas a la API de Marvel
   GET characters/{id}
 ```
 
-| Parametro | Tipo    | Descripción                |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | Id del personaje |
-| `ts` | `long` | Current Timestamp |
-| `apikey` | `String` | Public Api Key |
-| `hash` | `String` | MD5 Hash |
+| Parametro | Tipo     | Descripción       |
+|:----------|:---------|:------------------|
+| `id`      | `string` | Id del personaje  |
+| `ts`      | `long`   | Current Timestamp |
+| `apikey`  | `String` | Public Api Key    |
+| `hash`    | `String` | MD5 Hash          |
 
 #### Filtrar comics por personaje
 ```http
   GET characters/{id}/comics
 ```
-| Parametro | Tipo    | Descripción                |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | Id del personaje |
-| `format`      | `string` | Formato del comic |
-| `formatType`      | `string` | Tipo de formato del comic |
-| `ts` | `long` | Current Timestamp |
-| `apikey` | `String` | Public Api Key |
-| `hash` | `String` | MD5 Hash |
+| Parametro    | Tipo     | Descripción               |
+|:-------------|:---------|:--------------------------|
+| `id`         | `string` | Id del personaje          |
+| `format`     | `string` | Formato del comic         |
+| `formatType` | `string` | Tipo de formato del comic |
+| `ts`         | `long`   | Current Timestamp         |
+| `apikey`     | `String` | Public Api Key            |
+| `hash`       | `String` | MD5 Hash                  |
 
 
 ## Autor

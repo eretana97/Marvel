@@ -51,16 +51,38 @@
             />
 
 
-        <androidx.appcompat.widget.SearchView
-            android:id="@+id/sv_search"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_subtitle"
-            android:background="#50ffffff"
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_marginTop="16dp"
-            android:layout_alignParentStart="true"
-            style="@style/Widget.Material3.SearchView"
-            />
+            android:background="@drawable/shape_search"
+            android:layout_width="match_parent"
+            android:layout_below="@id/tv_subtitle"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:hint="Buscar"
+                android:layout_marginStart="8dp"
+                android:background="@null"
+                style="@null"
+                android:inputType="text"
+                android:imeOptions="actionSearch"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_search"
+                android:layout_gravity="center_vertical"
+                app:tint="@color/marvel_red_500"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                />
+
+        </LinearLayout>
 
 
     </RelativeLayout>

@@ -14,4 +14,12 @@
     <string name="marvel">Marvel</string>
     <string name="characters_dex">Character\'s Dex</string>
     <string name="favorite_list">List of favorite characters</string>
+    <string name="view_more">View more</string>
+
+    <plurals name="available_comics">
+        <item quantity="one">1 comic available</item>
+        <item quantity="other">%d comics available</item>
+    </plurals>
+    <string name="login_failure">Login failure!</string>
+    <string name="fail_credentials">Access credentials are not correct</string>
 </resources>

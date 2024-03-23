@@ -1,5 +1,6 @@
 package com.eretana.marvel.view;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 
@@ -56,7 +57,12 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ob
             Login.this.startActivity(intent);
             this.finish();
         }else{
-            Toast.makeText(Login.this,"LOGIN FAILED!",Toast.LENGTH_LONG).show();
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle(getResources().getString(R.string.login_failure));
+            builder.setMessage(getResources().getString(R.string.fail_credentials));
+            builder.setCancelable(true);
+            builder.setPositiveButton("Ok",null);
+            builder.create().show();
         }
     }
 }

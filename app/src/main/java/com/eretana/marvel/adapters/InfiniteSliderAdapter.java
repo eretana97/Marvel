@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -51,15 +52,33 @@ public class InfiniteSliderAdapter extends RecyclerView.Adapter<InfiniteSliderAd
 
         private TextView tvCharacterName;
         private TextView tvCharacterDescription;
+        private TextView tvNComics;
         private ImageView ivCharacterImage;
         private Context ctx;
+        private Button btn_more;
 
         public SlideViewHolder(@NonNull View itemView) {
             super(itemView);
             ctx = itemView.getContext();
+            tvNComics = itemView.findViewById(R.id.tv_n_comics);
             tvCharacterName = itemView.findViewById(R.id.tv_character_name);
             ivCharacterImage = itemView.findViewById(R.id.iv_character_image);
-            itemView.setOnClickListener(new View.OnClickListener() {
+            tvCharacterDescription = itemView.findViewById(R.id.tv_character_description);
+            btn_more = itemView.findViewById(R.id.btn_view_details);
+        }
+
+        void setItem(Character character){
+            tvCharacterName.setText(character.name);
+            tvCharacterDescription.setText(character.description);
+
+            String availablecomics = itemView.getResources().getQuantityString(R.plurals.available_comics,character.comics.available, character.comics.available);
+            tvNComics.setText(availablecomics);
+
+            Glide.with(ctx)
+                    .load(character.thumbnail.path + "." + character.thumbnail.extension)
+                    .into(ivCharacterImage);
+
+            btn_more.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     int id = characters.get(getAdapterPosition()).id;
@@ -68,13 +87,6 @@ public class InfiniteSliderAdapter extends RecyclerView.Adapter<InfiniteSliderAd
                     Main.navController.navigate(R.id.fragment_inifinity_slider_to_fragment_character_info,bundle);
                 }
             });
-        }
-
-        void setItem(Character character){
-            tvCharacterName.setText(character.name);
-            Glide.with(ctx)
-                    .load(character.thumbnail.path + "." + character.thumbnail.extension)
-                    .into(ivCharacterImage);
         }
     }
 

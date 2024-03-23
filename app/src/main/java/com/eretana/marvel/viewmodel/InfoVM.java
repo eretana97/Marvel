@@ -52,17 +52,15 @@ public class InfoVM extends ViewModel {
             @Override
             public void onResponse(Call<CharactersResponse> call, Response<CharactersResponse> response) {
                 if(response.isSuccessful()){
-                    Log.d("MARVEL_INFOVM","CHARACTER NAME: " + response.body().data.results.get(0).name);
-                    Log.d("MARVEL_INFOVM","CHARACTER DESCRIPTION: " + response.body().data.results.get(0).description);
                     character.setValue(response.body().data.results.get(0));
                 }else{
-                    Log.d("MARVEL_INFOVM","CODE:" + response.code());
+
                 }
             }
 
             @Override
             public void onFailure(Call<CharactersResponse> call, Throwable throwable) {
-                Log.d("MARVEL_INFOVM","ERROR: " + throwable.getMessage());
+
             }
         });
 
@@ -79,18 +77,12 @@ public class InfoVM extends ViewModel {
             public void onResponse(Call<ComicsResponse> call, Response<ComicsResponse> response) {
                 if(response.isSuccessful() && response.body() != null){
                     comics.setValue(response.body().data.results);
-                }else{
-                    try {
-                        Log.d("MARVEL_FAIL",response.errorBody().string());
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
-                    }
                 }
             }
 
             @Override
             public void onFailure(Call<ComicsResponse> call, Throwable throwable) {
-                Log.d("MARVEL_FAIL",throwable.getMessage());
+
             }
         });
     }

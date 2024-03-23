@@ -45,15 +45,12 @@ public class MainVM extends ViewModel {
             @Override
             public void onResponse(Call<CharactersResponse> call, Response<CharactersResponse> response) {
                 if(response.isSuccessful() && response.body() != null){
-                    Log.d("MARVEL_JSON_RESPONSE","CODE: " + response.body().code);
-                    Log.d("MARVEL_JSON_RESPONSE","STATUS: " + response.body().status);
                     characters.setValue(response.body().data.results);
                 }
             }
 
             @Override
             public void onFailure(Call<CharactersResponse> call, Throwable throwable) {
-                Log.d("MARVEL_JSON_RESPONSE",throwable.getLocalizedMessage());
             }
         });
     }

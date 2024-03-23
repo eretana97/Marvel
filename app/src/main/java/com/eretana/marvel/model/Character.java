@@ -25,6 +25,9 @@ public class Character {
     @Ignore
     public Thumbnail thumbnail;
 
+    @SerializedName("comics")
+    @Ignore
+    public AvailableComics comics;
 
     public long savedAt;
 

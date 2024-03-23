@@ -61,7 +61,6 @@ public class Favorites extends Fragment implements Observer<List<Character>>, Vi
     @Override
     public void onChanged(List<Character> cs) {
         characters.addAll(cs);
-        Log.d("MARVEL_FAVS","CHARACTERS:" + cs.size());
         adapter.notifyDataSetChanged();
     }
 

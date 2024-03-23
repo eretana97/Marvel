@@ -64,7 +64,6 @@ public class ComicsAdapter extends RecyclerView.Adapter<ComicsAdapter.ComicsVH> 
         }
 
         public void setComic(Comic comic){
-            Log.d("MARVEL_COMICS","COMICS ADAPTER" + comic.title);
             tv_name.setText(comic.title);
             tv_price.setText(String.format("$%s", comic.prices.get(0).price));
             Glide.with(v.getContext()).load(comic.thumbnail.path + "." + comic.thumbnail.extension).into(iv_image);

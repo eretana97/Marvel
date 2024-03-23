@@ -32,7 +32,6 @@ public class CharacterRepository {
         try {
             executor.execute(()->dao.insert(c));
         }catch (Exception e){
-            Log.e("MARVEL_ROOM",e.getMessage());
         }
     }
 
@@ -40,7 +39,6 @@ public class CharacterRepository {
         try {
             executor.execute(()->dao.delete(c));
         }catch (Exception e){
-            Log.e("MARVEL_ROOM",e.getMessage());
         }
     }
 
