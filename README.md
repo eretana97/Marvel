@@ -46,6 +46,8 @@ La app desarrollada les permitira a los usuarios autenticados ver la lista compl
 ![Splash](https://raw.githubusercontent.com/eretana97/Marvel/main/app/src/main/res/raw/ss_splash.jpg)
 #### Login
 ![Login](https://raw.githubusercontent.com/eretana97/Marvel/main/app/src/main/res/raw/ss_login.jpg)
+#### Main
+![Main](https://raw.githubusercontent.com/eretana97/Marvel/main/app/src/main/res/raw/ss_main.jpg)
 #### Información
 ![Info](https://raw.githubusercontent.com/eretana97/Marvel/main/app/src/main/res/raw/ss_info.jpg)
 #### Favoritos
