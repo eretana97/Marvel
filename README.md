@@ -51,7 +51,7 @@ La app desarrollada les permitira a los usuarios autenticados ver la lista compl
 #### Favoritos
 ![Favoritos](https://raw.githubusercontent.com/eretana97/Marvel/main/app/src/main/res/raw/ss_favorites.jpg)
 #### Dark/Light Theme
-![Dark Light](https://raw.githubusercontent.com/eretana97/Marvel/main/app/src/main/res/raw/ss_darklight.jpg)
+![Dark Light](https://raw.githubusercontent.com/eretana97/Marvel/main/app/src/main/res/raw/ss_darklight.png)
 
 
 
