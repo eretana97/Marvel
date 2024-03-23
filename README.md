@@ -84,7 +84,8 @@ Lista de peticiones realizadas a la API de Marvel
 | `hash` | `String` | MD5 Hash |
 
 
-## Authors
+## Autor
 
 Edgar Retana Github: [@eretana97](https://www.github.com/eretana97)
+
 
