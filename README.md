@@ -36,10 +36,22 @@ La app desarrollada les permitira a los usuarios autenticados ver la lista compl
 - **Modo Dark** / Light
 - Soporte de lenguaje Español (SV) / Ingles
 - Redireccionamiento a navegador Web
-- Libreria Glide para mostrar Imagenes
+- Libreria Glide para mostrar Images
 - JetPack Navigation para navegacion entre fragmentos del Main Activity
 - App icon
 - Plurals Strings
+
+## ScreenShots
+#### Splash
+![Splash](https://raw.githubusercontent.com/eretana97/Marvel/main/app/src/main/res/raw/ss_splash.jpg)
+#### Login
+![Login](https://raw.githubusercontent.com/eretana97/Marvel/main/app/src/main/res/raw/ss_login.jpg)
+#### Info
+![Info](https://raw.githubusercontent.com/eretana97/Marvel/main/app/src/main/res/raw/ss_info.jpg)
+#### Favoritos
+![Favoritos](https://raw.githubusercontent.com/eretana97/Marvel/main/app/src/main/res/raw/ss_favorites.jpg)
+#### Dark/Light Theme
+![Dark Light](https://raw.githubusercontent.com/eretana97/Marvel/main/app/src/main/res/raw/ss_darklight.jpg)
 
 
 
