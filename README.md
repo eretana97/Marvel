@@ -29,7 +29,7 @@ La app desarrollada les permitira a los usuarios autenticados ver la lista compl
 - Libreria Material Desing 3
 - Libreria Retrofit para peticiones HTTP
 - Consumo de API [Marvel](https://gateway.marvel.com/v1)
-- Busquedor de personajes por nombre
+- Buscador de personajes por nombre
 - Lista de favoritos
 - Base de datos local con libreria Room
 - Nested Scroll View Anidacion de ConstraintLayout con RecyclerView
@@ -42,11 +42,11 @@ La app desarrollada les permitira a los usuarios autenticados ver la lista compl
 - Plurals Strings
 
 ## ScreenShots
-#### Splash
+#### Splash Screen
 ![Splash](https://raw.githubusercontent.com/eretana97/Marvel/main/app/src/main/res/raw/ss_splash.jpg)
 #### Login
 ![Login](https://raw.githubusercontent.com/eretana97/Marvel/main/app/src/main/res/raw/ss_login.jpg)
-#### Info
+#### Información
 ![Info](https://raw.githubusercontent.com/eretana97/Marvel/main/app/src/main/res/raw/ss_info.jpg)
 #### Favoritos
 ![Favoritos](https://raw.githubusercontent.com/eretana97/Marvel/main/app/src/main/res/raw/ss_favorites.jpg)
