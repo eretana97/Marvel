@@ -2,7 +2,7 @@ package com.eretana.marvel.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class CharactersResponse {
+public class ComicsResponse {
 
     @SerializedName("code")
     public String code;
@@ -11,8 +11,6 @@ public class CharactersResponse {
     public String status;
 
     @SerializedName("data")
-    public DataResultCharacters data;
-
-
+    public DataResultComics data;
 
 }

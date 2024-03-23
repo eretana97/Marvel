@@ -15,7 +15,7 @@ import java.util.List;
 public interface DaoCharacter {
 
     @Query("SELECT EXISTS (SELECT 1 FROM characters WHERE id = :characterId)")
-    boolean exist(int characterId);
+    LiveData<Boolean> exist(int characterId);
 
     @Query("SELECT * FROM characters")
     LiveData<List<Character>> getAll();

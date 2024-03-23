@@ -44,7 +44,7 @@ public class CharacterRepository {
         }
     }
 
-    public boolean ifCharacterExist(int id){
+    public LiveData<Boolean> ifCharacterExist(int id){
         return dao.exist(id);
     }
 

@@ -6,10 +6,20 @@ import java.util.List;
 
 public class Comic {
 
-    @SerializedName("available")
-    public int available;
+    @SerializedName("id")
+    public int id;
 
-    @SerializedName("items")
-    public List<ComicItem> items;
+    @SerializedName("title")
+    public String title;
+
+    @SerializedName("thumbnail")
+    public Thumbnail thumbnail;
+
+    @SerializedName("prices")
+    public List<Price> prices;
+
+    @SerializedName("urls")
+    public List<Url> urls;
+
 
 }

@@ -1,6 +1,7 @@
 package com.eretana.marvel.services;
 
 import com.eretana.marvel.services.endpoints.CharacterByIdEndpoint;
+import com.eretana.marvel.services.endpoints.CharacterComicsEndpoint;
 import com.eretana.marvel.services.endpoints.CharactersEndpoint;
 
 import retrofit2.Retrofit;
@@ -26,6 +27,10 @@ public class RetrofitService {
 
     public CharacterByIdEndpoint callCharacterByIdEndpoint(){
         return retrofit.create(CharacterByIdEndpoint.class);
+    }
+
+    public CharacterComicsEndpoint callCharacterComicsEndpoint(){
+        return retrofit.create(CharacterComicsEndpoint.class);
     }
 
 

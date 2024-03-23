@@ -21,13 +21,11 @@ public class Character {
     @SerializedName("description")
     public String description;
 
-
     @SerializedName("thumbnail")
     @Ignore
     public Thumbnail thumbnail;
 
-    @SerializedName("comics")
-    @Ignore
-    public Comic comics;
+
+    public long savedAt;
 
 }

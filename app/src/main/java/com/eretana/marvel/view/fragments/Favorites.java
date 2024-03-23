@@ -79,7 +79,7 @@ public class Favorites extends Fragment implements Observer<List<Character>>, Vi
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 repository.deleteFavorite(c);
-                characters.clear();
+                characters.remove(c);
                 adapter.notifyDataSetChanged();
             }
         });

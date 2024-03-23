@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.eretana.marvel.R;
 import com.eretana.marvel.db.CharacterRepository;
 import com.eretana.marvel.model.Character;
+import com.eretana.marvel.tools.DateTools;
 import com.eretana.marvel.view.Main;
 
 import java.util.List;
@@ -47,14 +49,16 @@ public class FavsAdapter extends RecyclerView.Adapter<FavsAdapter.FavsViewHolder
 
     class FavsViewHolder extends RecyclerView.ViewHolder{
 
-        private TextView tv_name;
-        private ImageView iv_delete;
+        private TextView tv_name, tv_savedat;
+        private Button iv_delete;
         private int position;
         private View itemview;
+
 
         public FavsViewHolder(@NonNull View itemView) {
             super(itemView);
             this.tv_name = itemView.findViewById(R.id.tv_name);
+            this.tv_savedat = itemView.findViewById(R.id.tv_savedat);
             this.iv_delete = itemView.findViewById(R.id.iv_delete);
             this.itemview = itemView;
         }
@@ -65,8 +69,11 @@ public class FavsAdapter extends RecyclerView.Adapter<FavsAdapter.FavsViewHolder
 
         public void setCharacter(Character c){
             this.tv_name.setText(c.name);
+            this.tv_savedat.setText(String.format("%s %s", itemview.getContext().getResources().getString(R.string.saved_at), DateTools.formatDate(c.savedAt)));
             this.iv_delete.setTag(R.id.iv_delete,this.position);
             this.iv_delete.setOnClickListener(onclickdelete);
+
+
             this.itemview.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

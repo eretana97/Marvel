@@ -3,4 +3,15 @@
     <string name="app_name">Marvel</string>
     <string name="hello_blank_fragment">Hola fragment vacio</string>
     <string name="remove_from_favorites">Eliminar de favoritos?</string>
+    <string name="no_description">No hay descripción disponible</string>
+    <string name="saved_at">Fecha de guardado:</string>
+    <string name="comic_list">Lista de comics:</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="hint_email">Correo Electrónico</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="btn_login">Ingresar</string>
+    <string name="welcome">Bienvenido</string>
+    <string name="marvel">Marvel</string>
+    <string name="characters_dex">Dex de Personajes</string>
+    <string name="favorite_list">Lista de personajes favoritos</string>
 </resources>
