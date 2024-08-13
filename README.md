@@ -102,6 +102,9 @@ Lista de peticiones realizadas a la API de Marvel
 | `hash`       | `String` | MD5 Hash                  |
 
 
+## DESCARGA
+[DESCARGAR APK v1.0](https://raw.githubusercontent.com/eretana97/Marvel/main/app/release/app-release.apk)
+
 ## Autor
 
 Edgar Retana Github: [@eretana97](https://www.github.com/eretana97)
